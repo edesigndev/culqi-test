@@ -7,7 +7,7 @@ export interface EmployeeState extends User {
 }
 
 export interface IEmployees {
-  professions: Profession[]
+  professions: string[]
   employees: User[]
   isLoading: boolean
   messageError: string
@@ -25,5 +25,3 @@ export interface IEmployees {
   filterPosition: (name: string) => void
   filterName: (name: string) => void
 }
-
-export type Profession = { [key: string]: string[] }

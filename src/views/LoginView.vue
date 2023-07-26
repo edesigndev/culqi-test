@@ -34,7 +34,7 @@ const onLogin = () => {
       </div>
     </div>
     <div class="w-full sm:w-1/2 h-full bg-white flex flex-col justify-center items-center">
-      <form class="p-6 sm:p-0 max-w-[480px] w-full" @submit.prevent="login">
+      <form class="p-6 sm:p-0 max-w-[480px] w-full">
         <h1 class="text-center font-bold text-[#111827] text-lg mb-6">Inicia sesión</h1>
 
         <div class="flex flex-col mb-6">

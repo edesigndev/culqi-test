@@ -1,6 +1,6 @@
 import serviceApi from '@/api/serviceApi'
 import type { User } from '@/interfaces/auth'
-import type { EmployeeState, Profession } from '@/interfaces/employee'
+import type { EmployeeState } from '@/interfaces/employee'
 import { useAuthStore } from '@/store/auth'
 import { onMounted, ref, watch } from 'vue'
 
@@ -10,7 +10,7 @@ export const useEmployees = () => {
   const messageError = ref<string>('')
   const newToken = ref<string>('')
 
-  const professions = ref<Profession[]>()
+  const professions = ref<string[]>([])
   const position = ref<string>('')
   const searchName = ref<string>('')
 

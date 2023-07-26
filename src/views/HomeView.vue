@@ -23,7 +23,7 @@ const {
   setItemsPerPage,
   position,
   searchName
-}: IEmployees = useEmployees()
+} = useEmployees()
 </script>
 
 <template>

@@ -1,21 +1,23 @@
 <script setup lang="ts">
 import { useEmployees } from '@/composables/useEmployees'
-import type { Profession, IEmployees } from '@/interfaces/employee'
+
 import { ref } from 'vue'
 import type { PropType } from 'vue'
 
-const { filterPosition, filterName }: IEmployees = useEmployees()
+const { filterPosition, filterName } = useEmployees()
 
 const employee = ref('')
 const position = ref('')
 
 const changePosition = (value: string) => {
-  filterPosition(value.target.value)
+  filterPosition(value)
 }
 
 const changeName = (value: string) => {
-  filterName(value.target.value)
+  filterName(value)
 }
+
+const handleInputChange = (event: Event) => (event.target as HTMLInputElement).value
 
 const props = defineProps({
   isLoading: {
@@ -23,7 +25,7 @@ const props = defineProps({
     default: true
   },
   professions: {
-    type: Array as PropType<Profession[]>,
+    type: Array,
     default: () => []
   }
 })
@@ -68,14 +70,14 @@ const props = defineProps({
           name="email"
           v-model="employee"
           placeholder="Buscar empleado"
-          @input="changeName($event)"
+          @input="changeName(handleInputChange($event))"
         />
       </div>
       <div v-if="!props.isLoading" class="w-1/3">
         <select
           class="border rounded-lg px-3 py-3 text-sm w-full"
           v-model="position"
-          @change="changePosition($event)"
+          @change="changePosition(handleInputChange($event))"
         >
           <template v-for="(item, index) in professions" :key="index">
             <option>{{ item }}</option>
