@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { useEmployees } from '@/composables/useEmployees'
-import type { User } from '@/interfaces/auth'
-import type { IEmployees } from '@/interfaces/employee'
 import { useUIStore } from '@/store/ui'
-
-import { computed } from 'vue'
 
 const useUI = useUIStore()
 
@@ -27,9 +23,12 @@ const {
 </script>
 
 <template>
-  <div :class="useUI.showSidebar ? 'h-full w-full flex sm:pl-[280px]' : 'h-full w-full flex'">
-    <SidebarComponent v-if="useUI.showSidebar" />
-    <div class="w-full h-screen bg-[#F1F2F4]">
+  <div class="h-full w-full flex">
+    <SidebarComponent :class="useUI.showSidebar ? 'translate-x-0' : 'translate-x-[-280px]'" />
+    <div
+      class="w-full h-screen bg-[#F1F2F4]"
+      :class="useUI.showSidebar ? 'translate-x-[280px]' : 'translate-x-0'"
+    >
       <NavbarComponent />
       <div class="mx-4 my-6 p-4 bg-white">
         <BoxSearcherComponent

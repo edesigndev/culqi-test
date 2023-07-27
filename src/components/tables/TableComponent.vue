@@ -128,8 +128,8 @@ const changeItemsPerPage = (value: number) => {
       </tbody>
     </table>
 
-    <div class="mt-6 flex justify-between">
-      <div class="flex items-center">
+    <div class="my-6 flex flex-wrap justify-between">
+      <div class="flex items-center my-1">
         <button
           class="px-2"
           @click="prevPage"
@@ -158,7 +158,7 @@ const changeItemsPerPage = (value: number) => {
           <IconArrow />
         </button>
       </div>
-      <div class="flex items-center text-[#687588] text-xs">
+      <div class="flex items-center text-[#687588] text-xs my-1">
         <span class="px-1"
           >Mostrando {{ firstItem }} a {{ lastItem }} de {{ totalItems }} registros</span
         >

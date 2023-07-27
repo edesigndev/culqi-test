@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { useAuth } from '@/composables/useAuth'
+
 const { logout } = useAuth()
 </script>
 
 <template>
   <aside
-    class="bg-white px-8 py-6 translate-x-[-280px] sm:translate-x-0 w-[280px] box-border fixed top-0 left-0 z-[999] h-screen border-r-[#F1F2F4] border-r-2"
+    class="bg-white px-8 py-6 w-[280px] box-border fixed top-0 left-0 z-[999] h-screen border-r-[#F1F2F4] border-r-2"
     aria-label="Sidebar"
   >
     <div class="h-full overflow-y-auto flex flex-col justify-between">
