@@ -24,11 +24,8 @@ const {
 
 <template>
   <div class="h-full w-full flex">
-    <SidebarComponent :class="useUI.showSidebar ? 'translate-x-0' : 'translate-x-[-280px]'" />
-    <div
-      class="w-full h-screen bg-[#F1F2F4]"
-      :class="useUI.showSidebar ? 'translate-x-[280px]' : 'translate-x-0'"
-    >
+    <SidebarComponent :class="useUI.showSidebar ? 'px-8 py-6  w-[280px]' : 'w-0'" />
+    <div class="w-full h-screen bg-[#F1F2F4]">
       <NavbarComponent />
       <div class="mx-4 my-6 p-4 bg-white">
         <BoxSearcherComponent

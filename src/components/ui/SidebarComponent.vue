@@ -6,7 +6,7 @@ const { logout } = useAuth()
 
 <template>
   <aside
-    class="bg-white px-8 py-6 w-[280px] box-border fixed top-0 left-0 z-[999] h-screen border-r-[#F1F2F4] border-r-2"
+    class="bg-white box-border top-0 left-0 z-[999] h-screen border-r-[#F1F2F4] border-r-2"
     aria-label="Sidebar"
   >
     <div class="h-full overflow-y-auto flex flex-col justify-between">
